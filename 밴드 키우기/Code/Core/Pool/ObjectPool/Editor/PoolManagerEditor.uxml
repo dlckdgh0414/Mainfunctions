@@ -1,0 +1,17 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Chuh007Lib/ObjectPool/Editor/PoolManagerEditor.uss?fileID=7433441132597879392&amp;guid=b5cc5b3b8b2f5cc45b63b64ed9a300aa&amp;type=3#PoolManagerEditor" />
+    <ui:VisualElement name="Container" style="flex-grow: 1;">
+        <ui:VisualElement name="TopBar" class="top_bar">
+            <ui:Label text="PoolManager Edtior" name="TitleLabel" style="font-size: 25px; -unity-font-style: bold;" />
+            <ui:Button text="Create" name="CreateBtn" class="create_btn" />
+        </ui:VisualElement>
+        <Chuh007Lib.ObjectPool.Editor.GGMSplitView fixed-pane-initial-dimension="250">
+            <ui:VisualElement name="LeftPanel" style="flex-grow: 1; padding-right: 2px; padding-left: 2px;">
+                <ui:ScrollView name="ItemView" class="scroll_view" style="padding-bottom: 0;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="RightPanel" style="flex-grow: 1; padding-right: 2px; padding-left: 2px;">
+                <ui:VisualElement name="InspectorView" class="Inspector_view" />
+            </ui:VisualElement>
+        </Chuh007Lib.ObjectPool.Editor.GGMSplitView>
+    </ui:VisualElement>
+</ui:UXML>

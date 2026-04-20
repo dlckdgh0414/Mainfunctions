@@ -1,0 +1,20 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement name="ItemListContainer" style="flex-grow: 0; flex-basis: 200px; background-color: rgba(0, 0, 0, 0.3);">
+            <ui:ListView name="ItemListView" style="flex-grow: 1;" />
+            <ui:VisualElement name="ButtonContainer" style="flex-grow: 0; flex-basis: 50px; flex-direction: row;">
+                <ui:Button text="삭제" name="RemoveButton" style="flex-grow: 1; flex-shrink: 1;" />
+                <ui:Button text="생성" name="CreateButton" style="flex-shrink: 1; flex-grow: 1;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="DetailContainer" style="flex-grow: 1;">
+            <ui:VisualElement name="NameElement" style="flex-grow: 0; flex-basis: 50px;">
+                <ui:TextField label="SO 이름" placeholder-text="SO 이름 입력" name="AssetNameField" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ValueElement" style="flex-grow: 1;">
+                <ui:IntegerField label="최소값" value="0" max-length="2147483647" name="MinValueField" />
+                <ui:IntegerField label="최대값" value="0" max-length="-2147483648" name="MaxValueField" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

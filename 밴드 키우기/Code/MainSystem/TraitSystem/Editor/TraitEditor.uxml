@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="root" style="flex-direction: row; flex-grow: 1;">
+        <ui:VisualElement style="width: 250px; border-right-width: 1px; border-right-color: rgb(35, 35, 35); background-color: rgb(45, 45, 45);">
+            <ui:Label text="특성 리스트" style="-unity-font-style: bold; padding: 8px; background-color: rgb(35, 35, 35);" />
+            <ui:ListView name="trait-list" fixed-item-height="25" style="flex-grow: 1;" />
+            <ui:Button name="add-trait-btn" text="새로운 특성 생성" style="height: 35px; margin: 10px; background-color: rgb(40, 60, 40);" />
+        </ui:VisualElement>
+        <ui:ScrollView style="flex-grow: 1; padding: 20px; background-color: rgb(56, 56, 56);">
+            <ui:Label text="특성 상세 설정" style="-unity-font-style: bold; font-size: 20px; margin-bottom: 15px;" />
+            <ui:GroupBox text="Base Settings" name="base-settings" style="margin-bottom: 25px; padding: 15px; background-color: rgb(50, 50, 50); border-radius: 5px;">
+                <uie:PropertyField binding-path="TraitName" label="Display Name" />
+                <uie:PropertyField binding-path="TraitTag" label="Trait Tag" />
+                <uie:PropertyField binding-path="Special Logic" label="Special Logic" />
+                <ui:VisualElement style="margin-top: 5px; margin-bottom: 5px; min-height: 22px;">
+                    <uie:PropertyField binding-path="TraitIcon" label="Trait Icon Asset" />
+                </ui:VisualElement>
+                <uie:PropertyField binding-path="Point" label="Cost Point" />
+                <ui:VisualElement name="logic-dropdown-container" style="margin-top: 10px;" />
+                <uie:PropertyField binding-path="DescriptionEffect" label="Effect Description" style="margin-top: 10px;" />
+            </ui:GroupBox>
+            <ui:VisualElement style="margin-bottom: 25px;">
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <ui:Label text="멤버별 코멘트 지정" style="-unity-font-style: bold; font-size: 16px;" />
+                    <ui:Button name="gen-comments-btn" text="코멘트 5개 자동 생성" style="height: 25px;" />
+                </ui:VisualElement>
+                <ui:ListView name="member-comment-list" style="min-height: 400px; background-color: rgb(40, 40, 40);" />
+            </ui:VisualElement>
+            <ui:Label text="특성 수치 효과 (Impacts)" style="-unity-font-style: bold; font-size: 16px; margin-bottom: 8px;" />
+            <ui:ListView name="impact-list" fixed-item-height="30" style="min-height: 150px; background-color: rgb(45, 45, 45);" />
+            <ui:Button name="add-pair-btn" text="새로운 효과 수치 추가" style="margin-top: 10px; height: 40px; -unity-font-style: bold;" />
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

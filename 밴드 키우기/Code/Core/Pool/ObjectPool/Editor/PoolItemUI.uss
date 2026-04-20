@@ -1,0 +1,89 @@
+.pool_item {
+    flex-grow: 0;
+    flex-direction: row;
+    flex-basis: 45px;
+    align-items: center;
+    justify-content: space-between;
+    border-left-color: rgb(130, 130, 130);
+    border-right-color: rgb(130, 130, 130);
+    border-top-color: rgb(130, 130, 130);
+    border-bottom-color: rgb(130, 130, 130);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    transition-duration: 0.3s;
+}
+
+.pool_item:hover {
+    flex-grow: 0;
+    flex-direction: row;
+    flex-basis: 45px;
+    align-items: center;
+    justify-content: space-between;
+    border-left-color: rgb(159, 159, 159);
+    border-right-color: rgb(159, 159, 159);
+    border-top-color: rgb(159, 159, 159);
+    border-bottom-color: rgb(159, 159, 159);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: rgb(123, 123, 123);
+}
+
+.pool_item.active {
+    flex-grow: 0;
+    flex-direction: row;
+    flex-basis: 45px;
+    align-items: center;
+    justify-content: space-between;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: rgb(154, 154, 154);
+}
+
+.delete_btn {
+    background-color: rgb(178, 0, 0);
+    border-left-color: rgb(149, 0, 0);
+    border-right-color: rgb(149, 0, 0);
+    border-top-color: rgb(149, 0, 0);
+    border-bottom-color: rgb(118, 2, 2);
+}
+
+.delete_btn:hover {
+    background-color: rgb(197, 0, 0);
+}
+
+.title_label {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-basis: 50px;
+    flex-grow: 1;
+}

@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="item-row" style="flex-direction: row; margin-bottom: 2px; align-items: center; padding: 3px; background-color: rgb(62, 62, 62); border-radius: 3px;">
+        <ui:Label name="id-label" text="N1" style="width: 30px; -unity-text-align: middle-center; color: rgb(180, 180, 180); -unity-font-style: bold;" />
+        
+        <uie:PropertyField name="effect-field" style="width: 70px; margin-left: 5px;" />
+        
+        <uie:PropertyField name="target-field" style="flex-grow: 1; margin-left: 5px;" />
+        
+        <uie:PropertyField name="calc-field" style="width: 80px; margin-left: 5px;" />
+        
+        <uie:PropertyField name="tag-field" style="width: 100px; margin-left: 5px;" />
+        
+        <ui:Button name="remove-btn" text="X" style="width: 25px; height: 20px; margin-left: 5px; background-color: rgb(150, 50, 50); color: white; border-radius: 2px;" />
+    </ui:VisualElement>
+</ui:UXML>

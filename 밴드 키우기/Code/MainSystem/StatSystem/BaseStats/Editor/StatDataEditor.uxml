@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="StatDataContainer" style="flex-grow: 1; padding: 10px;">
+        <ui:VisualElement name="MemberCategory" style="flex-direction: row; align-items: center; margin-bottom: 10px; padding: 8px; background-color: rgb(60, 60, 60); border-radius: 5px;">
+            <ui:Label text="멤버&#10;" name="MemberTitle" style="-unity-font-style: bold; margin-right: 10px;" />
+            <ui:EnumField name="MemberEnumField" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:TwoPaneSplitView fixed-pane-initial-dimension="250" name="StatData" style="flex-grow: 1;">
+            <ui:VisualElement name="ListElement" style="flex-grow: 1; padding: 5px; background-color: rgb(45, 45, 45);">
+                <ui:Label name="ListTitle" text="스탯 리스트" style="-unity-font-style: bold; margin-bottom: 5px;" />
+                <ui:ListView name="AssetListView" style="flex-grow: 1; margin-bottom: 5px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="DetailElement" style="flex-grow: 1; padding: 10px;">
+                <ui:ScrollView name="DetailContainer" style="flex-grow: 1;" />
+            </ui:VisualElement>
+        </ui:TwoPaneSplitView>
+    </ui:VisualElement>
+</ui:UXML>
