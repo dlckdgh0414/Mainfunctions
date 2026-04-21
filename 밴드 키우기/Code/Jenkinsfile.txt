@@ -1,0 +1,50 @@
+pipeline {
+    agent any
+
+    environment {
+        UNITY_PATH = "C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.10f1\\Editor\\Unity.exe"
+        PROJECT_PATH = "${WORKSPACE}"
+        KEYSTORE_PATH = "D:\\Keystore\\growyourband\\keystore.keystore"
+        KEY_ALIAS = "growyourband"
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build Android') {
+            steps {
+                withCredentials([
+                    string(credentialsId: 'keystore-pass', variable: 'KEYSTORE_PASS'),
+                    string(credentialsId: 'keyalias-pass', variable: 'KEYALIAS_PASS')
+                ]) {
+                    bat """
+                    "${UNITY_PATH}" -batchmode -nographics -quit ^
+                      -projectPath "${PROJECT_PATH}" ^
+                      -executeMethod BuildScript.BuildAndroid ^
+                      -outputPath "${PROJECT_PATH}\\Build\\Android\\game_${BUILD_NUMBER}.apk" ^
+                      -keystoreName "${KEYSTORE_PATH}" ^
+                      -keystorePass "${KEYSTORE_PASS}" ^
+                      -keyaliasName "${KEY_ALIAS}" ^
+                      -keyaliasPass "${KEYALIAS_PASS}" ^
+                      -logFile "${PROJECT_PATH}\\Logs\\android.log"
+                    """
+                }
+            }
+        }
+
+    }
+
+    post {
+        always {
+            bat "type \"${PROJECT_PATH}\\Logs\\android.log\" 2>nul || echo No log file"
+        }
+        success {
+            archiveArtifacts artifacts: 'Build/Android/*.apk', fingerprint: true
+        }
+    }
+}
